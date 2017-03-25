@@ -21,9 +21,15 @@ class HelloWorldApp extends Component {
     return (
     <View style={{alignItems: 'center'}}>
       <Image source={pic} style={{width: 193, height: 110}}/>
-      <Greeting name='Jack' />
-      <Greeting name='Donna' />
-      <Greeting name='Martha' />
+      <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}>
+        <Greeting name='Jack' />
+      </View>
+      <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}}>
+        <Greeting name='Donna' />
+      </View>
+      <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}}>
+        <Greeting name='Martha' />
+      </View>
     </View>
     );
   }

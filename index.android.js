@@ -19,15 +19,15 @@ class HelloWorldApp extends Component {
         uri: 'https://upload.wikimedia.org/wikipedia/commons/0/09/Rose-Ringed_Parakeet.jpg'
     };
     return (
-    <View style={{alignItems: 'center', height: 300}}>
+    <View style={{alignItems: 'center', flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
       <Image source={pic} style={{width: 193, height: 110}}/>
-      <View style={{flex: 1, backgroundColor: 'powderblue'}}>
+      <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}>
         <Greeting name='Jack' />
       </View>
-      <View style={{flex: 2, backgroundColor: 'skyblue'}}>
+      <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}}>
         <Greeting name='Donna' />
       </View>
-      <View style={{flex: 3, backgroundColor: 'steelblue'}}>
+      <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}}>
         <Greeting name='Martha' />
       </View>
     </View>

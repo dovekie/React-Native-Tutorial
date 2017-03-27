@@ -3,7 +3,13 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry, Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { AppRegistry,
+         Image,
+         ScrollView,
+         StyleSheet,
+         Text,
+         TextInput,
+         View } from 'react-native';
 
 class Greeting extends Component {
     render() {
@@ -23,25 +29,29 @@ class HelloWorldApp extends Component {
         uri: 'https://upload.wikimedia.org/wikipedia/commons/0/09/Rose-Ringed_Parakeet.jpg'
     };
     return (
-    <View style={{alignItems: 'center', flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
-      <Image source={pic} style={{width: 193, height: 110}}/>
-      <TextInput
-        style={{height: 40, width: 150}}
-        placeholder="Enter your name!"
-        onChangeText={(text) => this.setState({text})} />
-      <View style={{height: 50, backgroundColor: 'powderblue'}}>
-        <Greeting name='Jack' />
-      </View>
-      <View style={{height: 50, backgroundColor: 'skyblue'}}>
-        <Greeting name='Donna' />
-      </View>
-      <View style={{height: 50, backgroundColor: 'steelblue'}}>
-        <Greeting name='Martha' />
-      </View>
-      <View style={{height: 50, backgroundColor: 'lightblue'}}>
-        <Greeting name={this.state.text} />
-      </View>
-    </View>
+    <ScrollView>
+        <View style={{alignItems: 'center', flex: 1, flexDirection: 'column', justifyContent: 'center'}}>
+          <Image source={pic} style={{width: 193, height: 110}}/>
+          <TextInput
+            style={{height: 40, width: 200}}
+            placeholder="Enter your name & scroll!"
+            onChangeText={(text) => this.setState({text})} />
+              <Image source={require('./img/arrow-chevron-down_318-28793.jpg')} />
+              <Image source={require('./img/arrow-chevron-down_318-28793.jpg')} />
+          <View style={{height: 50, backgroundColor: 'powderblue'}}>
+            <Greeting name='Jack' />
+          </View>
+          <View style={{height: 50, backgroundColor: 'skyblue'}}>
+            <Greeting name='Donna' />
+          </View>
+          <View style={{height: 50, backgroundColor: 'steelblue'}}>
+            <Greeting name='Martha' />
+          </View>
+          <View style={{height: 50, backgroundColor: 'lightblue'}}>
+            <Greeting name={this.state.text} />
+          </View>
+        </View>
+    </ScrollView>
     );
   }
 }
